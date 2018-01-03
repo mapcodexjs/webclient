@@ -1261,6 +1261,9 @@ var define = define || {};
             return setAttrFromValueForKey(elem, "src", value);
         };
         valueForKey = function(key, data){
+            if(!key)
+                return null;
+
             var keys, value, _i, _len;
             keys = key.split(/\./);
             value = data;
