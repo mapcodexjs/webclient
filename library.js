@@ -1183,8 +1183,8 @@ var define = define || {};
             return wrappedSet.each(function(){
                 var elem, key, value;
                 elem = $(this);
-                key = elem.data("localize");
-                key || (key = elem.attr("rel").match(/localize\[(.*?)\]/)[1]);
+                key = elem.attr("data-localize") || elem.data("localize");
+                //key || (key = elem.attr("rel").match(/localize\[(.*?)\]/)[1]);
                 value = valueForKey(key, data);
                 if(value != null)
                 {
